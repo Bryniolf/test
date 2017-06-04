@@ -1,0 +1,130 @@
+ -------------- Error (2017-06-02 19:22:01.0597) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:22:01.9592) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:26:24.3792) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:26:25.1720) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:26:31.9169) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:26:33.1049) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:29:15.3274) --------------
+  
+  Call Site: Pokazowy.FTPClient.UploadLogsToFtp
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.UploadFile(Uri address, String method, String fileName)
+   w System.Net.WebClient.UploadFile(String address, String fileName)
+   w Pokazowy.FTPClient.UploadLogsToFtp() w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 120
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:29:17.1601) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:29:17.8743) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:30:25.4681) --------------
+  
+  Call Site: Pokazowy.FTPClient.UploadLogsToFtp
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.UploadFile(Uri address, String method, String fileName)
+   w System.Net.WebClient.UploadFile(String address, String fileName)
+   w Pokazowy.FTPClient.UploadLogsToFtp() w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 120
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:30:39.5302) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 19:30:40.4247) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'ftpmotip.pl'
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 40
+  Additional Info: Problem z po³¹czeniem do FTP
+
+ -------------- Error (2017-06-02 20:36:51.7486) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: System.Net.WebException
+  Exception Message: Wyst¹pi³ wyj¹tek podczas ¿¹dania klienta WebClient.
+  Stack Trace:    w System.Net.WebClient.DownloadFile(Uri address, String fileName)
+   w System.Net.WebClient.DownloadFile(String address, String fileName)
+   w Pokazowy.FTPClient.DownloadFileFromFTP(String fileName) w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 39
+  Additional Info: Problem z po³¹czeniem do FTP
+

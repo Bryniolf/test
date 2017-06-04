@@ -1,0 +1,111 @@
+﻿<Window x:Class="Pokazowy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pokazowy"
+        mc:Ignorable="d"
+        Title="Aplikacja pokazowa" Height="900" Width="700">
+    <Grid x:Name="mainGrid" Margin="0">
+        <Grid.Background>
+            <ImageBrush x:Name="mainGridBackground"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="112*"/>
+            <RowDefinition Height="175*"/>
+            <RowDefinition Height="27*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="154*"/>
+            <RowDefinition Height="41*"/>
+            <RowDefinition Height="51*"/>
+            <RowDefinition Height="90*"/>
+        </Grid.RowDefinitions>
+        <MediaElement x:Name="videoBox" LoadedBehavior="Play" UnloadedBehavior="Manual" RenderTransformOrigin="0.5,0.5" MediaEnded="VideoBoxMediaEnded" Loaded="VideoBoxLoaded" Grid.RowSpan="2" Margin="34,26"/>
+        <Grid x:Name="animationGrid" Margin="3,12,16,1" Grid.Column="1" Grid.Row="1">
+            <Label x:Name="sumiennoscLabel" Content="SUMIENNOŚĆ" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" Opacity="0" />
+            <Label x:Name="perfectionLabel" Content="PERFEKCJA" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" Margin="27,44,27,0" Opacity="0"/>
+            <Label x:Name="dokladnoscLabel" Content="DOKŁADNOŚĆ" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="22" Margin="10,88,6,0" Opacity="0"/>
+            <TextBlock x:Name="yourPartnerInBuisnessTxt" Text="TWÓJ PARTNER W BIZNESIE" TextWrapping="WrapWithOverflow" HorizontalAlignment="Center" Height="153" VerticalAlignment="Center" Width="169" FontSize="26" FontWeight="Bold" TextAlignment="Center" RenderTransformOrigin="0.5,0.372" Opacity="0"/>
+            <Grid.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <BeginStoryboard>
+                        <Storyboard x:Name="animationsStory" Duration="0:00:20" RepeatBehavior="20">
+                            <DoubleAnimation BeginTime="0:0:0" Duration="0:0:3" Storyboard.TargetName="sumiennoscLabel" Storyboard.TargetProperty="Opacity" From="0" To="1"/>
+                            <DoubleAnimation BeginTime="0:0:3.20" Duration="0:0:3" Storyboard.TargetName="perfectionLabel" Storyboard.TargetProperty="Opacity" From="0" To="1"/>
+                            <DoubleAnimation BeginTime="0:0:6.40" Duration="0:0:3" Storyboard.TargetName="dokladnoscLabel" Storyboard.TargetProperty="Opacity" From="0" To="1"/>
+                            <DoubleAnimation BeginTime="0:0:9.60" Duration="0:0:1" Storyboard.TargetName="sumiennoscLabel" Storyboard.TargetProperty="Opacity" From="1" To="0"/>
+                            <DoubleAnimation BeginTime="0:0:9.60" Duration="0:0:1" Storyboard.TargetName="perfectionLabel" Storyboard.TargetProperty="Opacity" From="1" To="0"/>
+                            <DoubleAnimation BeginTime="0:0:9.60" Duration="0:0:1" Storyboard.TargetName="dokladnoscLabel" Storyboard.TargetProperty="Opacity" From="1" To="0"/>
+                            <DoubleAnimation BeginTime="0:0:11.0" Duration="0:0:5.30" Storyboard.TargetName="yourPartnerInBuisnessTxt" Storyboard.TargetProperty="Opacity" From="0" To="1"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Grid.Triggers>
+        </Grid>
+        <Image x:Name="logoKzlImg" Source="/Pokazowy;component/RequiredFiles/kzl_logo.png" HorizontalAlignment="Left" Height="68" Margin="12,34,0,0" VerticalAlignment="Top" Width="187" Grid.Column="1"/>
+        <TextBlock x:Name="textKontener" Grid.Row="3" TextWrapping="Wrap" Text="TextBlock" FontSize="16" FontFamily="Consolas" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10,3,10,0" Grid.RowSpan="5" Padding="10,5,10,10">
+            <TextBlock.Background>
+                <SolidColorBrush Color="#FF4FD5E2" Opacity="0.5" />
+            </TextBlock.Background>
+        </TextBlock>
+        <Button x:Name="aboutFirmButton" Content="Informacje o firmie" Grid.Column="1" HorizontalAlignment="Center" Height="50" Grid.Row="3" VerticalAlignment="Center" Width="150" Margin="29,12,29,11" Click="AboutFirmButtonClick">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF93CBE6" Offset="0.995"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF508D9E" Offset="0.013"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="aboutProjectsButton" Content="Projekty" Grid.Column="1" HorizontalAlignment="Center" Height="50" Grid.Row="4" VerticalAlignment="Center" Width="150" Margin="29,11,29,12" Click="AboutProjectsButtonClick">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF93CBE6" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF508D9E" Offset="0.013"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="contactButton" Content="Kontakt" Grid.Column="1" HorizontalAlignment="Center" Height="50" Grid.Row="5" VerticalAlignment="Center" Width="150" Margin="29,12,29,11" Click="ContactButtonClick">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF93CBE6" Offset="1"/>
+                    <GradientStop Color="White"/>
+                    <GradientStop Color="#FF508D9E" Offset="0.013"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="ourClientsTxt" HorizontalAlignment="Left" Height="44" Grid.Row="8" TextWrapping="Wrap" Text="Nasi klienci:" VerticalAlignment="Center" Width="170" Margin="10,0,0,7" FontSize="25" FontWeight="Bold"/>
+        <Grid Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="80" Grid.Row="9" VerticalAlignment="Top" Width="691">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="pkpUtrzymanieImg" Source="/Pokazowy;component/RequiredFiles/klienci_pkputrzymanie.jpg" MouseEnter="SetClientBigImage" Margin="5,0" MouseLeave="ClearOurClientsBigImage" />
+            <Image x:Name="pkpInfImg" Source="/Pokazowy;component/RequiredFiles/klienci_pkpik.png" Grid.Column="1" MouseEnter="SetClientBigImage" Margin="5,0" MouseLeave="ClearOurClientsBigImage"/>
+            <Image x:Name="pesaImg" Source="/Pokazowy;component/RequiredFiles/klienci_pesa.jpg" Grid.Column="2" MouseEnter="SetClientBigImage" Margin="5,0" MouseLeave="ClearOurClientsBigImage"/>
+            <Image x:Name="kwImg" Source="/Pokazowy;component/RequiredFiles/klienci_kw.jpg" Grid.Column="3" MouseEnter="SetClientBigImage" Margin="5,0,10,0" MouseLeave="ClearOurClientsBigImage"/>
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="195" Margin="53,24,0,0" Grid.Row="3" Grid.RowSpan="3" VerticalAlignment="Top" Width="397" Visibility="Hidden"/>
+        <Image x:Name="ourClientBigImg" HorizontalAlignment="Left" Height="114" Margin="18,96,0,0" Grid.Row="6" Grid.RowSpan="3" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
+        <DocumentViewer x:Name="documentViewer" Height="373" Grid.Row="3" Grid.RowSpan="4" VerticalAlignment="Top" Margin="10,0,0,0" Visibility="Hidden" Background="#FF4FD5E2">
+            <DocumentViewer.Resources>
+                <Style TargetType="ContentControl">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Style>
+                <Style TargetType="ToolBar">
+                    <Setter Property="Visibility" Value="Collapsed" />
+                </Style>
+            </DocumentViewer.Resources>
+        </DocumentViewer>
+
+    </Grid>
+</Window>

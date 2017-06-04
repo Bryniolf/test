@@ -1,0 +1,337 @@
+ -------------- Info (2017-06-04 00:37:46.3557) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:37:47.2560) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:47:39.6968) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:47:40.6904) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:48:43.2162) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:48:44.1899) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Error (2017-06-04 00:50:37.2232) --------------
+  
+  Call Site: Pokazowy.MainWindow.SetStartingContent
+  Exception Type: System.InvalidOperationException
+  Exception Message: W¹tek wywo³uj¹cy nie mo¿e uzyskaæ dostêpu do tego obiektu, poniewa¿ nale¿y on do innego w¹tku.
+  Stack Trace:    w System.Windows.Threading.Dispatcher.VerifyAccess()
+   w System.Windows.DependencyObject.SetValueInternal(DependencyProperty dp, Object value)
+   w System.Windows.Media.ImageBrush.set_ImageSource(ImageSource value)
+   w Pokazowy.MainWindow.SetStartingContent() w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\MainWindow.xaml.cs:wiersz 92
+  Additional Info: Inny b³¹d podczas ³adowania contentu aplikacji
+
+ -------------- Info (2017-06-04 00:50:38.9114) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:50:39.8015) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Error (2017-06-04 00:51:45.4818) --------------
+  
+  Call Site: Pokazowy.MainWindow.SetStartingContent
+  Exception Type: System.InvalidOperationException
+  Exception Message: W¹tek wywo³uj¹cy nie mo¿e uzyskaæ dostêpu do tego obiektu, poniewa¿ nale¿y on do innego w¹tku.
+  Stack Trace:    w System.Windows.Threading.Dispatcher.VerifyAccess()
+   w System.Windows.DependencyObject.SetValueInternal(DependencyProperty dp, Object value)
+   w System.Windows.Media.ImageBrush.set_ImageSource(ImageSource value)
+   w Pokazowy.MainWindow.SetStartingContent() w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\MainWindow.xaml.cs:wiersz 92
+  Additional Info: Inny b³¹d podczas ³adowania contentu aplikacji
+
+ -------------- Info (2017-06-04 00:54:25.8196) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:54:26.8211) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:56:08.2277) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:56:09.0648) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Error (2017-06-04 00:58:49.3084) --------------
+  
+  Call Site: Pokazowy.MainWindow.SetStartingContent
+  Exception Type: System.IO.FileNotFoundException
+  Exception Message: Nie mo¿na odnaleŸæ pliku 'C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\RequiredFiles\klienci_kw.jpg'.
+  Stack Trace:    w System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   w System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   w System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)
+   w System.Windows.Media.Imaging.BitmapDecoder.SetupDecoderFromUriOrStream(Uri uri, Stream stream, BitmapCacheOption cacheOption, Guid& clsId, Boolean& isOriginalWritable, Stream& uriStream, UnmanagedMemoryStream& unmanagedMemoryStream, SafeFileHandle& safeFilehandle)
+   w System.Windows.Media.Imaging.BitmapDecoder.CreateFromUriOrStream(Uri baseUri, Uri uri, Stream stream, BitmapCreateOptions createOptions, BitmapCacheOption cacheOption, RequestCachePolicy uriCachePolicy, Boolean insertInDecoderCache)
+   w System.Windows.Media.Imaging.BitmapImage.FinalizeCreation()
+   w System.Windows.Media.Imaging.BitmapImage.EndInit()
+   w System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource, RequestCachePolicy uriCachePolicy)
+   w System.Windows.Media.Imaging.BitmapImage..ctor(Uri uriSource)
+   w Pokazowy.MainWindow.SetStartingContent() w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\MainWindow.xaml.cs:wiersz 96
+  Additional Info: Nie znaleziono min jednego pliku podczas ³adowania contentu
+
+ -------------- Info (2017-06-04 00:58:51.2080) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 00:58:52.1730) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:16:49.8844) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:16:50.7724) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:19:39.5633) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:19:40.5665) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:19:57.4352) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:19:58.5209) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:21:12.9893) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:21:15.0075) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:27:51.9148) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:27:52.9432) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:34:20.4594) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:34:21.5284) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:43:13.4398) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:43:14.3532) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:48:32.6779) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 01:48:33.6490) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 02:07:32.9162) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 02:07:33.8429) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 02:07:57.7560) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 02:07:58.8488) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 02:11:04.1000) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku informacje_kzl.pdf zakoñczy³o siê powodzeniem.
+
+ -------------- Info (2017-06-04 02:11:04.9706) --------------
+  
+  Call Site: Pokazowy.FTPClient.DownloadFileFromFTP
+  Exception Type: 
+  Exception Message: 
+  Stack Trace: 
+  Additional Info: Pobieranie pliku kontakt_kzl.xps zakoñczy³o siê powodzeniem.
+
+ -------------- Error (2017-06-04 02:57:08.6555) --------------
+  
+  Call Site: Pokazowy.FTPClient.CheckForInternetConnection
+  Exception Type: System.Net.WebException
+  Exception Message: Nie mo¿na rozpoznaæ nazwy zdalnej: 'www.google.com'
+  Stack Trace:    w System.Net.WebClient.OpenRead(Uri address)
+   w System.Net.WebClient.OpenRead(String address)
+   w Pokazowy.FTPClient.CheckForInternetConnection() w C:\Users\Bryniolf\Documents\test\Pokazowy\Pokazowy\FTPClient.cs:wiersz 65
+  Additional Info: Brak po³¹czenia z Internetem
+
