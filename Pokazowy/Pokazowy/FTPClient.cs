@@ -1,62 +1,39 @@
-﻿using NLog;
-using System;
+﻿using System;
 using System.IO;
 using System.Net;
-using System.Timers;
-using System.Windows;
-using System.IO.Compression;
-using System.Threading;
+
+using NLog;
 
 namespace Pokazowy
 {
     public class FTPClient
     {
-        private string userName { get; set; }
-        private string password { get; set; }
-        private string serverAddress { get; set; }
-        private int port { get; set; }
+        public readonly string UserName;
+        public readonly string Password;
+        public readonly string ServerAddress;
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
-        public FTPClient(string userName, string password, string serverAddress, int port)
+        public FTPClient(string userName, string password, string serverAddress)
         {
-            this.userName = userName;
-            this.password = password;
-            this.serverAddress = serverAddress;
-            this.port = port;
+            UserName = userName;
+            Password = password;
+            ServerAddress = serverAddress;
         }
 
-        public void DownloadFileFromFTP(string fileName)
+        public static void DownloadRequiredFilesFromFtp()
         {
-            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/RequiredFiles";
-            string inputfilepath = projectPath + "/" + fileName;
-            string ftpfullpath = "ftp://ftp.motip.pl/public_html/allegro/";
+            FTPClient clientFtp = new FTPClient(Properties.Settings.Default.UserName,
+                                                Properties.Settings.Default.UserPassword,
+                                                Properties.Settings.Default.FtpSerwer);
 
-
-            using (WebClient request = new WebClient())
+            if (clientFtp.IsInternetAvailable())
             {
-                try
-                {
-                    request.Credentials = new NetworkCredential(userName, password);
-                    request.BaseAddress = ftpfullpath;
-                    request.DownloadFile(fileName, inputfilepath);
-                    logger.Info("Pobieranie pliku " + fileName + " zakończyło się powodzeniem.");
-                }
-                catch (ArgumentException ex)
-                {
-                    logger.Error(ex, "Problem ze ścieżka do FTP przy pobieraniu pliku " + fileName);
-                }
-                catch (WebException ex)
-                {
-                    logger.Error(ex, "Problem z połączeniem do FTP");
-                }
-                catch (Exception ex)
-                {
-                    logger.Error(ex, "Inny problem przy pobieraniu pliku" + fileName + " z serwera FTP");
-                }
+                clientFtp.DownloadFileFromFTP("informacje_kzl.pdf");
+                clientFtp.DownloadFileFromFTP("kontakt_kzl.xps");
             }
         }
 
-        public bool CheckForInternetConnection()
+        public bool IsInternetAvailable()
         {
             try
             {
@@ -75,48 +52,37 @@ namespace Pokazowy
             }
         }
 
-        public static void DownloadRequiredFilesFromFtp()
-        {
-            FTPClient clientFtp = new FTPClient("*****", "*****", "******", 21);
-
-            if (clientFtp.CheckForInternetConnection() == true)
-            {
-                clientFtp.DownloadFileFromFTP("informacje_kzl.pdf");
-                clientFtp.DownloadFileFromFTP("kontakt_kzl.xps");
-            }
-        }
-
         public string ReadFromFtpTxtFile(string fileName)
         {
             using (WebClient request = new WebClient())
             {
                 string result = string.Empty;
-                request.Credentials = new NetworkCredential(userName, password);
-                string ftpfullpath = "ftp://ftp.motip.pl/public_html/allegro/";
+                request.Credentials = new NetworkCredential(UserName, Password);
+                string ftpfullpath = "ftp://" + ServerAddress + "/public_html/allegro/";
                 result = request.DownloadString(ftpfullpath + "/" + fileName);
 
                 return result;
             }
         }
 
-        public void UploadYesterdayLogsToFtp()
+        private void DownloadFileFromFTP(string fileName)
         {
-            string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string yesterday = DateTime.Today.AddDays(-1).ToShortDateString();
-            string oldLogsZipFile = programDirectory + "OldLogs\\logs_"+ yesterday +".zip";
-            string ftpfullpath = "ftp://ftp.motip.pl/public_html/allegro/logs_" + yesterday + ".zip";
+            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/RequiredFiles";
+            string inputfilepath = projectPath + "/" + fileName;
+            string ftpfullpath = "ftp://" + ServerAddress + "/public_html/allegro/";
 
             using (WebClient request = new WebClient())
             {
                 try
                 {
-                    request.Credentials = new NetworkCredential(userName, password);
+                    request.Credentials = new NetworkCredential(UserName, Password);
                     request.BaseAddress = ftpfullpath;
-                    request.UploadFile(ftpfullpath, oldLogsZipFile);
+                    request.DownloadFile(fileName, inputfilepath);
+                    logger.Info("Pobieranie pliku " + fileName + " zakończyło się powodzeniem.");
                 }
                 catch (ArgumentException ex)
                 {
-                    logger.Error(ex, "Problem ze ścieżka do FTP");
+                    logger.Error(ex, "Problem ze ścieżka do FTP przy pobieraniu pliku " + fileName);
                 }
                 catch (WebException ex)
                 {
@@ -124,65 +90,9 @@ namespace Pokazowy
                 }
                 catch (Exception ex)
                 {
-                    logger.Error(ex, "Inny problem przy pobieraniu pliku z FTP");
+                    logger.Error(ex, "Inny problem przy pobieraniu pliku" + fileName + " z serwera FTP");
                 }
             }
-        }
-
-        public void ArchiveOldLogsToZip()
-        {
-            string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string yesterday = DateTime.Today.AddDays(-1).ToShortDateString();
-            string oldLogs = programDirectory + "logs_" + yesterday + ".log";
-            string oldLogsZipFile = programDirectory + "OldLogs\\logs_" + yesterday + ".zip";
-
-            try
-            {
-                using (FileStream fs = new FileStream(oldLogsZipFile, FileMode.Create))
-                using (ZipArchive arch = new ZipArchive(fs, ZipArchiveMode.Create))
-                {
-                    arch.CreateEntryFromFile(oldLogs, "logs_" + yesterday + ".log");
-                }
-                File.Delete(oldLogs);
-            }
-            catch(DirectoryNotFoundException ex)
-            {
-                logger.Error(ex, "Problem przy archiwizacji starych logów. Nie znaleziono folderu.");
-            }
-            catch(FileNotFoundException ex)
-            {
-                logger.Error(ex, "Problem przy archiwizacji starych logów. Nie znaleziono pliku logów.");
-            }
-            catch (Exception ex)
-            {
-                logger.Error(ex, "Problem przy archiwizacji starych logów. Inny błąd.");
-            }
-        }
-
-
-        public static void IsOldLogsExist(Object source, ElapsedEventArgs e)
-        {
-            FTPClient clientFtp = new FTPClient("*****", "*****", "******", 21);
-
-            string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string yesterday = DateTime.Today.AddDays(-1).ToShortDateString();
-            string fileToCheckExist = programDirectory + "logs_" + yesterday + ".log";
-            
-
-            if (File.Exists(fileToCheckExist))
-            {
-                clientFtp.ArchiveOldLogsToZip();
-                clientFtp.UploadYesterdayLogsToFtp();
-            }
-        }
-
-        public static void TimerCheckForOldLogs()
-        {
-            System.Timers.Timer timer = new System.Timers.Timer();
-            timer.Interval = 10 * 60 * 1000;
-            timer.Elapsed += IsOldLogsExist;
-            timer.AutoReset = true;
-            timer.Enabled = true;
         }
     }
 }

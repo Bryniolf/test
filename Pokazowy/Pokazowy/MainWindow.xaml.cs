@@ -1,19 +1,19 @@
 ﻿using System;
 using System.IO;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Input;
-using System.Threading;
-using NLog;
-using System.Windows.Media.Imaging;
 using System.Timers;
+using System.Windows;
+using System.Windows.Input;
+using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+
+using NLog;
 
 namespace Pokazowy
 {
     public partial class MainWindow : Window
     {
-        ContentProvider contentProvider = new ContentProvider();
         private static Logger logger = LogManager.GetCurrentClassLogger();
+        private ContentProvider contentProvider = new ContentProvider();
 
         public MainWindow()
         {
@@ -23,19 +23,30 @@ namespace Pokazowy
                 textKontener.Text = contentProvider.GetPdfText("informacje_kzl.pdf");
                 SetContent();
 
-                FTPClient.TimerCheckForOldLogs();
+                LogsManager.TimerCheckForOldLogs();
                 TimerUpdate();
             }
             catch (Exception ex)
             {
                 logger.Error(ex, "Problem z utworzeniem obiektu MainWindow");
             }
+        }
 
+        public void TimerUpdate()
+        {
+            Timer timer = new Timer()
+            {
+                Interval = 10 * 60 * 1000
+            };
+
+            timer.Elapsed += UpdateContent;
+            timer.AutoReset = true;
+            timer.Enabled = true;
         }
 
         private void VideoBoxLoaded(object sender, RoutedEventArgs e)
         {
-            String projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/RequiredFiles";
+            string projectPath = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "/RequiredFiles";
 
             videoBox.Source = new Uri(projectPath + "/KZL.wmv");
             videoBox.Play();
@@ -68,7 +79,6 @@ namespace Pokazowy
         private void SetClientBigImage(object sender, MouseEventArgs e)
         {
             Image focusImage = sender as Image;
-
             if (focusImage != null)
             {
                 ourClientBigImg.Visibility = Visibility.Visible;
@@ -96,11 +106,10 @@ namespace Pokazowy
             {
                 logger.Error(ex, "Min jeden z plików nie został znaleziony");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 logger.Error(ex, "Inny błąd przy ładowaniu contentu");
             }
-            
         }
 
         private BitmapImage SetImage(string fileName)
@@ -109,19 +118,10 @@ namespace Pokazowy
             return new BitmapImage(new Uri(filesPath + fileName));
         }
 
-        private void UpdateContent(Object source, ElapsedEventArgs e)
+        private void UpdateContent(object source, ElapsedEventArgs e)
         {
             FTPClient.DownloadRequiredFilesFromFtp();
             SetContent();
-        }
-
-        public  void TimerUpdate()
-        {
-            System.Timers.Timer timer = new System.Timers.Timer();
-            timer.Interval = 30 * 60 * 1000;
-            timer.Elapsed += UpdateContent;
-            timer.AutoReset = true;
-            timer.Enabled = true;
         }
     }
 }

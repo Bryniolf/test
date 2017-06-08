@@ -1,10 +1,10 @@
-﻿using iTextSharp.text.pdf;
-using NLog;
-using System;
+﻿using System;
 using System.IO;
-using System.Windows;
 using System.Windows.Documents;
 using System.Windows.Xps.Packaging;
+
+using iTextSharp.text.pdf;
+using NLog;
 
 namespace Pokazowy
 {
@@ -14,10 +14,13 @@ namespace Pokazowy
         
         public string GetText(string fileName)
         {
-            FTPClient ftpClient = new FTPClient( "*****", "*****", "******", 21);
+            FTPClient ftpClient = new FTPClient(Properties.Settings.Default.UserName,
+                                                Properties.Settings.Default.UserPassword,
+                                                Properties.Settings.Default.FtpSerwer);
+
             string result = string.Empty;
 
-            if (ftpClient.CheckForInternetConnection() == true)
+            if (ftpClient.IsInternetAvailable())
             {
                 try
                 {
@@ -45,7 +48,7 @@ namespace Pokazowy
             }
             catch (Exception ex)
             {
-                logger.Error(ex, "Problem z załadowaniem zawartości pliku "+ fileName);
+                logger.Error(ex, "Problem z załadowaniem zawartości pliku " + fileName);
             }
 
             return result;
@@ -68,6 +71,5 @@ namespace Pokazowy
 
             return result;
         }
-
     }
 }
