@@ -3,11 +3,14 @@
   <project key="667001819">
     <configuration>CODE_ANALYSIS;DEBUG;TRACE</configuration>
   </project>
+  <project key="-508823334">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="ContentProvider.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2016.11.10 18:44:50.000</styleCop>
       <settingsFile>2016.11.10 18:44:50.000</settingsFile>
-      <sourceFile>2017.06.08 02:14:47.590</sourceFile>
+      <sourceFile>2017.06.08 11:51:17.479</sourceFile>
       <parser>2016.11.10 18:44:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016.11.10 18:44:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>202844509</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -75,14 +78,19 @@
         <line>15</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>40</line>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="SplitParametersMustStartOnLineAfterDeclaration" ruleCheckId="SA1116">
+        <context>If the method parameters are on separate lines, the first parameter must begin on the line beneath the name of the method.</context>
+        <line>17</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The method must have a documentation header.</context>
-        <line>58</line>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>57</line>
         <warning>False</warning>
       </violation>
     </violations>
@@ -91,7 +99,7 @@
     <timestamps>
       <styleCop>2016.11.10 18:44:50.000</styleCop>
       <settingsFile>2016.11.10 18:44:50.000</settingsFile>
-      <sourceFile>2017.06.08 01:58:08.611</sourceFile>
+      <sourceFile>2017.06.08 11:51:17.463</sourceFile>
       <parser>2016.11.10 18:44:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016.11.10 18:44:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>202844509</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -294,7 +302,7 @@
     <timestamps>
       <styleCop>2016.11.10 18:44:50.000</styleCop>
       <settingsFile>2016.11.10 18:44:50.000</settingsFile>
-      <sourceFile>2017.06.08 02:13:12.510</sourceFile>
+      <sourceFile>2017.06.08 11:51:36.857</sourceFile>
       <parser>2016.11.10 18:44:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016.11.10 18:44:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>202844509</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -398,7 +406,7 @@
     <timestamps>
       <styleCop>2016.11.10 18:44:50.000</styleCop>
       <settingsFile>2016.11.10 18:44:50.000</settingsFile>
-      <sourceFile>2017.06.08 01:14:20.459</sourceFile>
+      <sourceFile>2017.06.08 11:43:37.036</sourceFile>
       <parser>2016.11.10 18:44:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016.11.10 18:44:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>202844509</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -653,7 +661,7 @@
     <timestamps>
       <styleCop>2016.11.10 18:44:50.000</styleCop>
       <settingsFile>2016.11.10 18:44:50.000</settingsFile>
-      <sourceFile>2017.06.08 00:59:54.423</sourceFile>
+      <sourceFile>2017.06.08 11:43:37.032</sourceFile>
       <parser>2016.11.10 18:44:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016.11.10 18:44:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>202844509</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -692,7 +700,7 @@
     <timestamps>
       <styleCop>2016.11.10 18:44:50.000</styleCop>
       <settingsFile>2016.11.10 18:44:50.000</settingsFile>
-      <sourceFile>2017.06.08 01:13:39.444</sourceFile>
+      <sourceFile>2017.06.08 11:43:37.034</sourceFile>
       <parser>2016.11.10 18:44:50.000</parser>
       <StyleCop.CSharp.DocumentationRules>2016.11.10 18:44:50.000</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>202844509</StyleCop.CSharp.DocumentationRules.FilesHashCode>

@@ -24,7 +24,7 @@ namespace Pokazowy
         {
             FTPClient clientFtp = new FTPClient(Properties.Settings.Default.UserName,
                                                 Properties.Settings.Default.UserPassword,
-                                                Properties.Settings.Default.jk);
+                                                Properties.Settings.Default.FtpSerwer);
 
             if (clientFtp.IsInternetAvailable())
             {

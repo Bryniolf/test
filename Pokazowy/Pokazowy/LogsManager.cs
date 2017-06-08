@@ -73,7 +73,7 @@ namespace Pokazowy
         {
             FTPClient clientFtp = new FTPClient(Properties.Settings.Default.UserName,
                                                 Properties.Settings.Default.UserPassword,
-                                                Properties.Settings.Default.jk);
+                                                Properties.Settings.Default.FtpSerwer);
 
             string programDirectory = AppDomain.CurrentDomain.BaseDirectory;
             string yesterday = DateTime.Today.AddDays(-1).ToShortDateString();

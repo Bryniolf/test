@@ -16,7 +16,7 @@ namespace Pokazowy
         {
             FTPClient ftpClient = new FTPClient(Properties.Settings.Default.UserName,
                                                 Properties.Settings.Default.UserPassword,
-                                                Properties.Settings.Default.jk);
+                                                Properties.Settings.Default.FtpSerwer);
 
             string result = string.Empty;
 
